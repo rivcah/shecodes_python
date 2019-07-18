@@ -1,0 +1,12 @@
+##given two numbers a, b, return their sum. 
+##Unless they are equal. In this case, 
+##return the double of their sum.
+##Using condiotions
+
+def numsum(a, b):
+  nums = (a+b)
+  double = 2*(nums)
+  if a==b:
+    return(double)
+   else:
+    return(nums)
