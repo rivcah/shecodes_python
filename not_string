@@ -1,0 +1,11 @@
+##Given a string, add 'not ' to its beginning.
+##If the string already starts with 'not', 
+##then simply return the string.
+
+def not_string(string): ##This function takes a string as an argument.
+  if string[0:3]=='not': ##if the three first elements of the string contain 'not'
+  ##it's important to remember that string[0:3] refers to the first(0), second(1) and third(2) characters of the string.
+    return(string) ##the function returns the original string
+   else: ##if the string doesn't start with 'not'
+    return('not '+string) ##the function adds the word 'not' and a single space to the string
+    
