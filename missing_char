@@ -1,0 +1,7 @@
+##Given a non-empty string and an integer number,
+##remove the character n.
+
+def missing_char(string, n): ##This function takes two arguments. One is a string and another is an integer.
+	new = string.replace(string[n], '') ##we use .replace(a, b)
+  ##this function takes the character string[n] and replaces by an empty space.
+	return(new) ##the function returns the new string formed above.
