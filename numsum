@@ -3,10 +3,10 @@
 ##return the double of their sum.
 ##Using condiotions
 
-def numsum(a, b):
+def numsum(a, b): ##this function takes two arguments a,b 
   nums = (a+b)
   double = 2*(nums)
-  if a==b:
-    return(double)
-   else:
-    return(nums)
+  if a==b: ##if variable a is equal to variable b
+    return(double) ##the return is the double of the sum
+   else: ##if variables a and b are different
+    return(nums) ##the function returns the sum of a and b
