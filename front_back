@@ -1,0 +1,12 @@
+##Given a string, exchange the first and the last characters.
+##Pay attention what to do if the string has only one character.
+
+def front_back(string): ##this function takes only one argument
+	
+	if len(string) > 1: ##if the length of the string is greater than one, the code starts
+		first = string[0] ## takes the first character of the string
+		last = string[-1] ##takes the last character of the string
+		mid = string[1:-1] ##takes the middle characters
+		return(last+mid+first) ##returns the new order
+	else: ##if the string has only one character, the function returns the string itself
+		return(string)
