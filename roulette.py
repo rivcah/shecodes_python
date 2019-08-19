@@ -1,28 +1,35 @@
-##This function was written as an exercise for the Python track of SheCodes.
-##The function works with the random library
-##The function chooses a random integer from zero to 36
-##And it stores this number as a variable
-##Then it asks the user to choose a number from 0 to 36.
-##The function then compares both numbers
-##If they are equal, the function returns a message saying the user won.
-##If the numbers aren't equal, it returns a message saying the user lost.
+##This function was written as an exercise for the SheCodes' Python track.
+##The first function works with Python's random library.
+
 
 def roulette():
-    import random as r
-    ##random is a python library
-    ##here I chose to "rename" it to r
-    ##since it will be easier to recall it whenever I needed.
-    number = r.randint(0, 37)
-    ##the computer chooses a random integer number from 0 to 36
-    lucky_number = int(input("Choose a number from 0 to 36: "))
-    ##The user enters their chosen number
-    if number == lucky_number:
-    ##this conditional compares both variabbles
-    ##It's important to pay attention to the double equal sign
-    ##This is used for comparing two values, variables, etc...
-        return("You won!")
-    ##If the numbers are equal, the user won and a message appear.
-    else:
-        return("No! You lost.")
-    ##If the numbers are different, the user lost and a correspondent message appears
-    
+	import random as r ##I import the random library.
+	##I chose 'import ... as ...' because in Python you have to
+	##call the library before you call its specific function.
+	##Then, importing random as r makes the whole job easier.
+	number = r.randint(0, 37) ##A random integer between 0 and 37 is chosen
+	return(number) ##The function returns the number randomly chosen
+    ##by the function.
+
+
+
+
+def choose():
+	number = roulette() ##It uses the previous function in order to choose
+	##a random integer
+	chosen = int(input("Choose a number between 0 and 36:\n"))
+	##asks for the input of the user
+	if chosen > number:
+            ##compares the number given by the user to the random number.
+            ##The user lost.
+		print("You lost! The number you chose is greater than the number the computer chose.")
+	elif chosen < number:
+            ##The user lost.
+		print("You lost. The number you chose is lesser than the number the computer chose.")
+	else:
+            ##The user wins.
+		print("You won! The numbers are equal.")
+	return(number)##That line is totally optional.
+    ##You can choose not to show the random number.
+
+		
