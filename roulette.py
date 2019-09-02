@@ -2,6 +2,7 @@
 ##The first function works with Python's random library.
 
 
+
 def roulette():
 	import random as r ##I import the random library.
 	##I chose 'import ... as ...' because in Python you have to
